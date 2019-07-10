@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Quotes</title>
+</head>
+<body>
+    <h1>All Flamingos</h1>
+    <% for (var x = all_quotes.length-1; x >= 0; x--) { %>
+        <div class="quote">
+        <h3>"<%= all_quotes[x].quote %>"</h3>
+        <h4>-<%= all_quotes[x].name %> at <%= all_quotes[x].createdAt %></h4>
+        <!-- .toLocaleString() -->
+        </div>
+        <hr>
+    <% } %>
+</body>
+</html>

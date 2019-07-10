@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>View Flamingo</title>
+</head>
+<body>
+    <h1>Flamingo <%= current_flamingo.name %>'s details</h1>
+    <h2>
+        Name:<%= current_flamingo.name %>
+    </h2>
+    <h2>
+        Quote:<%= current_flamingo.quote %>
+    </h2>
+    <a href="/flamingos/edit/<%= current_flamingo.id %>"><button>Edit</button></a>
+</body>
+</html>

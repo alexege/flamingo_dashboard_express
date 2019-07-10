@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit Flamingo</title>
+</head>
+<body>
+    <% for (var x of current_flamingo) { %>
+    <h1>Edit Flamingo <%= x.name %></h1>
+    <form action="/flamingos/<%= x.id %>" method="POST">
+        Name: <input type="text" name="name" value="<%= x.name %>"><br>
+        Quote: <input type="text" name="quote" value="<%= x.quote %>"><br>
+        <button>Update</button>
+    </form>
+    <% } %>
+</body>
+</html>

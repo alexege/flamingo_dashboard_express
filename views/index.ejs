@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Flamingos</title>
+</head>
+<body>
+    <h1>All Flamingos</h1>
+    <% for (var x = all_flamingos.length-1; x >= 0; x--) { %>
+        <div class="quote">
+            <h3><%= all_flamingos[x].name %></h3>
+            <a href="/flamingos/<%= all_flamingos[x].id %>">Details</a>
+            <a href="/flamingos/edit/<%= all_flamingos[x].id %>">Edit</a>
+            <a href="/flamingos/destroy/<%= all_flamingos[x].id %>">Delete</a>
+        </div>
+        <hr>
+    <% } %>
+    <a href="/flamingos/new"><button>New Flamingo</button></a>
+</body>
+</html>
